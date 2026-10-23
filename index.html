@@ -22,7 +22,7 @@
   <link rel="preload" as="image" href="assets/video/poster-169.jpg" media="(orientation: landscape)">
   <link rel="preload" as="image" href="assets/video/poster-916.jpg" media="(orientation: portrait)">
   <script>document.documentElement.classList.add('js')</script>
-  <link rel="stylesheet" href="styles.css?v=14">
+  <link rel="stylesheet" href="styles.css?v=16">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -83,12 +83,15 @@
     <div class="scrim" aria-hidden="true"></div>
     <div class="grain" aria-hidden="true"></div>
 
-    <div class="scene scene--center is-on" data-from="0" data-to="0.11">
+    <div class="scene scene--center scene--intro is-on" data-from="0" data-to="0.11">
       <div class="scene__box">
         <p class="label">Dino Digital · Porto Alegre</p>
         <h1 class="split">Seu negócio existe. <em>O Google precisa saber.</em></h1>
         <p class="scene__sub">Coloco empresas, negócios locais e prestadores de serviço de Porto Alegre e região no mapa, no topo da busca e no WhatsApp de quem já está procurando.</p>
-        <p class="cue">Role para acender a rua <span aria-hidden="true">↓</span></p>
+        <div class="cue">
+          <p class="cue__hint">A rua apagada é o seu negócio quando <b>ninguém te acha no Google</b>. Desça a tela e veja o que acontece quando eu entro em ação.</p>
+          <button class="cue__btn" type="button" id="cueBtn"><span class="cue__icon" aria-hidden="true"><i></i></span>Desça a tela devagar</button>
+        </div>
       </div>
     </div>
 
@@ -513,6 +516,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-<script src="script.js?v=6"></script>
+<script src="script.js?v=7"></script>
 </body>
 </html>

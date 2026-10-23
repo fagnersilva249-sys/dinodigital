@@ -148,6 +148,10 @@
     }, { passive: true });
   }
   document.getElementById('replay').addEventListener('click', () => scrollToY(0));
+  // botão "Desça a tela": leva até a primeira cena, mostrando o efeito
+  document.getElementById('cueBtn').addEventListener('click', () => {
+    scrollToY(spacer.offsetTop + 0.19 * (spacer.offsetHeight - innerHeight));
+  });
 
   /* ---------- animações das seções ---------- */
   if (hasGsap && !reduce) {

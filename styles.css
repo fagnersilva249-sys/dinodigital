@@ -550,3 +550,27 @@ section[id]{ scroll-margin-top:80px; }
 @media (prefers-reduced-motion: reduce){ .flow__drops i, .flow__pool{ animation:none!important; } .flow__drops i{ opacity:1; } }
 .svc .flow li::before{ display:none!important; } .svc .flow li{ padding-top:0; padding-bottom:0; }
 .flow .mini--ok .check{ flex:none; margin-bottom:.15rem; } .flow .mini--ok{ justify-content:center; gap:.2rem; }
+
+/* ================= v7: hero mais fácil de entender ================= */
+.cue{ margin-top:2rem; display:flex; flex-direction:column; align-items:center; gap:1.1rem; font:inherit; letter-spacing:0; text-transform:none; color:inherit; }
+.cue__hint{ max-width:30rem; font-size:.98rem; line-height:1.5; color:rgba(238,243,238,.82); text-shadow:0 2px 18px rgba(0,0,0,.8); }
+.cue__hint b{ color:var(--accent2); font-weight:600; }
+.cue__btn{ display:inline-flex; align-items:center; gap:.75rem; min-height:48px; padding:.6rem 1.3rem .6rem .7rem; border-radius:999px; border:1px solid rgba(139,234,176,.5); background:rgba(6,10,8,.6); color:var(--ink); font:600 .95rem/1 var(--f-body); cursor:pointer; backdrop-filter:blur(6px); animation:cuepulse 2.2s ease-out infinite; transition:background-color .3s, border-color .3s; }
+.cue__btn:hover{ background:rgba(34,197,94,.18); border-color:var(--accent); }
+@keyframes cuepulse{ 0%{ box-shadow:0 0 0 0 rgba(34,197,94,.45); } 100%{ box-shadow:0 0 0 14px rgba(34,197,94,0); } }
+.cue__icon{ position:relative; width:22px; height:34px; border:2px solid var(--accent2); border-radius:12px; flex:none; }
+.cue__icon i{ position:absolute; left:50%; top:6px; width:4px; height:8px; margin-left:-2px; border-radius:2px; background:var(--accent); animation:cuewheel 1.6s ease-in-out infinite; }
+@keyframes cuewheel{ 0%{ transform:translateY(0); opacity:1; } 70%{ transform:translateY(12px); opacity:0; } 100%{ transform:translateY(0); opacity:0; } }
+@media (max-width: 560px){
+  .scene--intro .scene__sub{ display:none; }
+  .cue{ margin-top:1.1rem; gap:.9rem; }
+  .cue__hint{ font-size:.92rem; }
+}
+@media (prefers-reduced-motion: reduce){ .cue__btn, .cue__icon i{ animation:none!important; } }
+
+/* celular/touch: seta pra baixo no lugar do "mouse" */
+@media (hover:none){
+  .cue__icon{ width:26px; height:26px; border:0; border-radius:50%; background:var(--accent); }
+  .cue__icon i{ left:50%; top:50%; width:8px; height:8px; margin:-6px 0 0 -4px; border-radius:0; background:none; border:solid #04170A; border-width:0 2.5px 2.5px 0; transform:rotate(45deg); animation:cuechev 1.4s ease-in-out infinite; }
+  @keyframes cuechev{ 0%,100%{ transform:translateY(-2px) rotate(45deg); } 50%{ transform:translateY(2px) rotate(45deg); } }
+}

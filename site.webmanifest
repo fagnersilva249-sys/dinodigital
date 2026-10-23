@@ -1,0 +1,3 @@
+{ "name": "Dino Digital", "short_name": "Dino Digital", "start_url": "./", "display": "standalone",
+  "background_color": "#060A08", "theme_color": "#0B1F17",
+  "icons": [ { "src": "assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml" } ] }

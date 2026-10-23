@@ -595,3 +595,33 @@ section[id]{ scroll-margin-top:80px; }
   .scene--top h2{ font-size:clamp(2.4rem,4vw,4rem); }
 }
 @media (max-width: 560px){ .scene--intro h1{ font-size:1.95rem; } }
+
+/* ================= v9: funil com imagens + fluxo animado ================= */
+.flow .stage{ flex:none; height:84%; width:auto; aspect-ratio:1; border-radius:14px; object-fit:cover; box-shadow:0 0 0 1px rgba(139,234,176,.25); transition:box-shadow .3s, transform .3s; }
+.flow li{ --on:0; }
+.flow li[data-step]{ animation:stepOn 7s ease-in-out infinite; }
+.flow li[data-step] .stage{ animation:stageOn 7s ease-in-out infinite; }
+.flow li[data-step="2"], .flow li[data-step="2"] .stage{ animation-delay:1.4s; }
+.flow li[data-step="3"], .flow li[data-step="3"] .stage{ animation-delay:2.8s; }
+.flow li[data-step="4"], .flow li[data-step="4"] .stage{ animation-delay:4.2s; }
+@keyframes stepOn{ 0%,22%,100%{ filter:brightness(.78) saturate(.8); } 4%,16%{ filter:brightness(1.35) saturate(1.2); } }
+@keyframes stageOn{ 0%,22%,100%{ transform:scale(1); box-shadow:0 0 0 1px rgba(139,234,176,.25); } 4%,16%{ transform:scale(1.08); box-shadow:0 0 0 2px #22C55E, 0 0 26px rgba(34,197,94,.75); } }
+.flow__lead{ position:absolute; z-index:4; left:50%; top:12%; transform:translate(-50%,-50%); display:inline-flex; align-items:center; gap:.35rem; padding:.28rem .6rem .28rem .3rem; border-radius:999px; background:#04170A; border:1px solid var(--accent); font:700 .6rem/1 var(--f-title); letter-spacing:.14em; text-transform:uppercase; color:var(--accent2); box-shadow:0 0 18px rgba(34,197,94,.7); animation:leadMove 7s cubic-bezier(.6,0,.3,1) infinite; pointer-events:none; }
+.flow__lead i{ width:12px; height:12px; border-radius:50%; background:radial-gradient(circle at 35% 35%, #B9F5CF, #22C55E 60%, #15803D); box-shadow:0 0 8px #22C55E; }
+@keyframes leadMove{
+  0%{ top:7%; opacity:0; }
+  2%{ top:11%; opacity:1; } 16%{ top:11%; }
+  20%{ top:27.2%; } 36%{ top:27.2%; }
+  40%{ top:43.4%; } 56%{ top:43.4%; }
+  60%{ top:59.7%; } 76%{ top:59.7%; }
+  84%{ top:78%; }
+  92%{ top:91%; opacity:1; }
+  96%,100%{ top:91%; opacity:0; }
+}
+.flow__pool{ animation:poolFlash 7s ease-in-out infinite!important; }
+@keyframes poolFlash{ 0%,86%,100%{ transform:translateX(-50%) scale(1); opacity:.7; } 92%{ transform:translateX(-50%) scale(1.5); opacity:1; } }
+@media (max-width: 560px){ .flow .stage{ height:78%; } .flow__lead{ font-size:.5rem; } }
+@media (prefers-reduced-motion: reduce){ .flow li[data-step], .flow li[data-step] .stage, .flow__lead{ animation:none!important; } .flow__lead{ display:none; } .flow li[data-step]{ filter:none; } }
+.flow{ grid-template-rows:repeat(4, minmax(0,1fr)); }
+.flow li{ min-height:0; height:100%; overflow:hidden; }
+.flow .stage{ height:82%; max-height:82%; width:auto; min-width:0; }

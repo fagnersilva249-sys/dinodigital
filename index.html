@@ -22,7 +22,7 @@
   <link rel="preload" as="image" href="assets/video/poster-169.jpg" media="(orientation: landscape)">
   <link rel="preload" as="image" href="assets/video/poster-916.jpg" media="(orientation: portrait)">
   <script>document.documentElement.classList.add('js')</script>
-  <link rel="stylesheet" href="styles.css?v=18">
+  <link rel="stylesheet" href="styles.css?v=20">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -208,23 +208,24 @@
         </div>
         <div class="svc__art svc__art--flow">
           <ol class="flow" aria-label="Funil de vendas funcionando: anúncio, página, WhatsApp e cliente">
-            <li style="--t:0%;--b:5%">
-              <div class="mini mini--ad" aria-hidden="true"><b>Patrocinado</b><i></i><i class="s"></i></div>
+            <li data-step="1" style="--t:0%;--b:5%">
+              <img class="stage" src="assets/img/funil/anuncio.jpg" alt="Anúncio no Google" width="480" height="480" loading="lazy">
               <div class="flow__tx"><span>01</span><strong>Anúncio</strong><small>Aparece pra quem já procura</small></div>
             </li>
-            <li style="--t:6%;--b:11%">
-              <div class="mini mini--page" aria-hidden="true"><i class="bar"></i><i></i><i class="s"></i><em>WhatsApp</em></div>
+            <li data-step="2" style="--t:6%;--b:11%">
+              <img class="stage" src="assets/img/funil/pagina.jpg" alt="Página do site" width="480" height="480" loading="lazy">
               <div class="flow__tx"><span>02</span><strong>Página</strong><small>Explica e convence</small></div>
             </li>
-            <li style="--t:12%;--b:17%">
-              <div class="mini mini--wa" aria-hidden="true"><p class="in">Oi! Vi o anúncio. Quanto fica?</p><p class="out">Te mando o orçamento agora!</p></div>
+            <li data-step="3" style="--t:12%;--b:17%">
+              <img class="stage" src="assets/img/funil/whatsapp.jpg" alt="Conversa no WhatsApp" width="480" height="480" loading="lazy">
               <div class="flow__tx"><span>03</span><strong>WhatsApp</strong><small>Conversa com o dono</small></div>
             </li>
-            <li style="--t:18%;--b:23%" class="flow__last">
-              <div class="mini mini--ok" aria-hidden="true"><span class="check"></span><b>Venda fechada</b><i>★★★★★</i></div>
+            <li style="--t:18%;--b:23%" class="flow__last" data-step="4">
+              <img class="stage" src="assets/img/funil/cliente.jpg" alt="Cliente satisfeito" width="480" height="480" loading="lazy">
               <div class="flow__tx"><span>04</span><strong>Cliente</strong><small>Compra, volta e indica</small></div>
             </li>
           </ol>
+          <span class="flow__lead" aria-hidden="true"><i></i>Lead</span>
           <div class="flow__neck" aria-hidden="true"></div>
           <div class="flow__drops" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
           <span class="flow__pool" aria-hidden="true"></span>

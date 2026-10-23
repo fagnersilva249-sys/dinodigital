@@ -121,7 +121,7 @@
   const scenes = [...document.querySelectorAll('.scene')];
   const hudLabel = document.getElementById('hudLabel');
   const hudSteps = [...document.querySelectorAll('.hud__steps i')];
-  const phases = [[0, 'A BUSCA'], [0.25, 'INVISÍVEL'], [0.51, '1º LUGAR'], [0.77, 'CLIENTE']];
+  const phases = [[0, 'HOJE: INVISÍVEL'], [0.33, 'NO MAPA'], [0.65, 'NO TOPO DO GOOGLE']];
   function updateHero(p) {
     target = p;
     scenes.forEach((s) => {
@@ -149,7 +149,7 @@
   }
   // botão "Desça a tela": leva até a primeira cena, mostrando o efeito
   document.getElementById('cueBtn').addEventListener('click', () => {
-    scrollToY(spacer.offsetTop + 0.38 * (spacer.offsetHeight - innerHeight));
+    scrollToY(spacer.offsetTop + 0.45 * (spacer.offsetHeight - innerHeight));
   });
 
   /* ---------- animações das seções ---------- */

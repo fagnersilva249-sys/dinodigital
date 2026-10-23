@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dinodigital.com.br/sitemap.xml
+Sitemap: https://fagnersilva249-sys.github.io/dinodigital/sitemap.xml

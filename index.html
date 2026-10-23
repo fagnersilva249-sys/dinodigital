@@ -19,10 +19,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="assets/video/poster-169.jpg" media="(orientation: landscape)">
-  <link rel="preload" as="image" href="assets/video/poster-916.jpg" media="(orientation: portrait)">
+  <link rel="preload" as="image" href="assets/video/poster2-169.jpg" media="(orientation: landscape)">
+  <link rel="preload" as="image" href="assets/video/poster2-916.jpg" media="(orientation: portrait)">
   <script>document.documentElement.classList.add('js')</script>
-  <link rel="stylesheet" href="styles.css?v=20">
+  <link rel="stylesheet" href="styles.css?v=23">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -77,13 +77,13 @@
 <!-- ============ HERO SCRUB: O RITUAL ============ -->
 <section class="hero-spacer" id="topo" aria-label="Seu negócio aceso no mapa">
   <div class="hero-sticky">
-    <video class="hero-video" id="heroVideo" muted playsinline preload="auto" poster="assets/video/poster-169.jpg"
-      data-src-land="assets/video/hero-169.mp4" data-src-port="assets/video/hero-916.mp4"
-      data-poster-land="assets/video/poster-169.jpg" data-poster-port="assets/video/poster-916.jpg"></video>
+    <video class="hero-video" id="heroVideo" muted playsinline preload="auto" poster="assets/video/poster2-169.jpg"
+      data-src-land="assets/video/hero2-169.mp4" data-src-port="assets/video/hero2-916.mp4"
+      data-poster-land="assets/video/poster2-169.jpg" data-poster-port="assets/video/poster2-916.jpg"></video>
     <div class="scrim" aria-hidden="true"></div>
     <div class="grain" aria-hidden="true"></div>
 
-    <div class="scene scene--center scene--intro is-on" data-from="0" data-to="0.3">
+    <div class="scene scene--left scene--intro is-on" data-from="0" data-to="0.23">
       <div class="scene__box">
         <p class="label">Marketing digital para empresas, negócios locais e prestadores de serviço</p>
         <h1 class="split">Seu negócio no mapa <em>e no topo das buscas do Google.</em></h1>
@@ -94,17 +94,24 @@
       </div>
     </div>
 
-    <div class="scene scene--center scene--top" data-from="0.34" data-to="0.62">
+    <div class="scene scene--left" data-from="0.27" data-to="0.49">
       <div class="scene__box">
-        <p class="label">Google Meu Negócio</p>
-        <h2 class="split">Primeiro, <em>no mapa.</em></h2>
+        <p class="label">Hoje</p>
+        <h2 class="split">Seu cliente procura. <em>Você está lá embaixo.</em></h2>
       </div>
     </div>
 
-    <div class="scene scene--center scene--top" data-from="0.66" data-to="1.01">
+    <div class="scene scene--left" data-from="0.53" data-to="0.75">
       <div class="scene__box">
-        <p class="label">Site + Google Ads</p>
-        <h2 class="split">Depois, <em>no topo do Google.</em></h2>
+        <p class="label">Com a Dino Digital</p>
+        <h2 class="split">Seu negócio sobe pro <em>1º lugar.</em></h2>
+      </div>
+    </div>
+
+    <div class="scene scene--left" data-from="0.79" data-to="1.01">
+      <div class="scene__box">
+        <p class="label">Resultado</p>
+        <h2 class="split">Ligação, rota e <em>cliente entrando.</em></h2>
         <div class="scene__ctas">
           <a class="btn btn--light" href="https://wa.me/5551996131655?text=Oi%20Fagner!%20Quero%20meu%20neg%C3%B3cio%20no%20mapa%20e%20no%20topo%20do%20Google." target="_blank" rel="noopener">Quero aparecer no Google <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13"/><path d="m13 6 6 6-6 6"/></svg></span></a>
         </div>
@@ -113,8 +120,8 @@
 
     <div class="hud" aria-hidden="true">
       <span class="hud__dot"></span>
-      <span class="hud__label" id="hudLabel">HOJE: INVISÍVEL</span>
-      <span class="hud__steps"><i></i><i></i><i></i></span>
+      <span class="hud__label" id="hudLabel">A BUSCA</span>
+      <span class="hud__steps"><i></i><i></i><i></i><i></i></span>
     </div>
   </div>
 </section>
@@ -474,6 +481,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-<script src="script.js?v=8"></script>
+<script src="script.js?v=9"></script>
 </body>
 </html>
